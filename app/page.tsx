@@ -75,20 +75,7 @@ const TechnologyItem: FC<{ icon: IconType; label: string }> = ({ icon: Icon, lab
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 flex flex-col justify-center items-center p-4 animate-gradient">
-      <style jsx>{`
-        @keyframes gradientAnimation {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-          background: linear-gradient(-45deg, #1f2937, #111827, #1f2937, #111827);
-          background-size: 400% 400%;
-          animation: gradientAnimation 20s ease infinite;
-        }
-      `}</style>
-      
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 p-4">
       {/* Header */}
       <header className="text-center space-y-2 mb-8">
         <h1 className="text-5xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
@@ -184,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* Contacts */}
-      <section className="text-center max-w-2xl">
+      <section className="text-center max-w-2xl mb-8">
         <h4 className="text-lg font-semibold text-sky-300 mb-2">Контактная информация</h4>
         <p className="text-sm text-gray-200">
           <strong>Адрес:</strong> [Ваш адрес]
@@ -198,8 +185,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="absolute bottom-4 text-center text-xs text-gray-400 w-full">
-        <p>© {new Date().getFullYear()} Артем Кравченко. Все права защищены.</p>
+      <footer className="text-center text-xs text-gray-400 mt-auto">
+        <p>© 2024 Артем Кравченко. Все права защищены.</p>
       </footer>
     </div>
   );
