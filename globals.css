@@ -1,10 +1,9 @@
-/* globals.css */
+/* Add this to your globals.css or appropriate CSS file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add global styles to this file, and also import other CSS files */
-/* Add this to your globals.css or appropriate CSS file */
+/* Custom gradient animation if desired */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
