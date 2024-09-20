@@ -76,7 +76,19 @@ const TechnologyItem: FC<{ icon: IconType; label: string }> = ({ icon: Icon, lab
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 flex flex-col justify-center items-center p-4">
-      <main className="w-full max-w-4xl flex flex-col items-center space-y-6 bg-gray-800 bg-opacity-75 p-8 rounded-lg backdrop-blur-md">
+      <style jsx>{`
+        @keyframes subtleMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animated-background {
+          background: linear-gradient(-45deg, #2d3748, #4a5568, #2d3748, #4a5568);
+          background-size: 400% 400%;
+          animation: subtleMove 20s ease infinite;
+        }
+      `}</style>
+      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6 bg-gray-800 bg-opacity-75 p-8 rounded-lg backdrop-blur-md animated-background">
         {/* Header */}
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
@@ -195,11 +207,5 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Артем Кравченко. Все права защищены.</p>
       </footer>
     </div>
-    ```
-```css
-/* Add this to your globals.css or appropriate CSS file */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  );
 }
