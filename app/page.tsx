@@ -9,20 +9,20 @@ import {
 import Link from 'next/link';
 import { FaEnvelope, FaPhone, FaWrench, FaCheckCircle } from 'react-icons/fa';
 import { 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaJs, 
-  FaReact, 
-  FaVuejs, 
-  FaAdobe, 
-  FaFigma, 
-  FaWordpress, 
-  FaShopify, 
-  FaSquarespace, 
-  FaAws, 
-  FaFirebase, 
-  FaSearch 
-} from 'react-icons/fa';
+  SiAdobe, 
+  SiAws, 
+  SiCss3Alt, 
+  SiFigma, 
+  SiFirebase, 
+  SiHtml5, 
+  SiJavascript, 
+  SiReact, 
+  SiSearch, 
+  SiShopify, 
+  SiSquarespace, 
+  SiVuejs, 
+  SiWordpress 
+} from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 // Define separate prop interfaces using discriminated unions
@@ -122,23 +122,23 @@ export default function Home() {
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             {/* HTML/CSS/JS */}
-            <TechnologyItem icon={FaHtml5} label="HTML5" />
-            <TechnologyItem icon={FaCss3Alt} label="CSS3" />
-            <TechnologyItem icon={FaJs} label="JavaScript" />
+            <TechnologyItem icon={SiHtml5} label="HTML5" />
+            <TechnologyItem icon={SiCss3Alt} label="CSS3" />
+            <TechnologyItem icon={SiJavascript} label="JavaScript" />
             {/* Frameworks */}
-            <TechnologyItem icon={FaReact} label="React" />
-            <TechnologyItem icon={FaVuejs} label="Vue.js" />
+            <TechnologyItem icon={SiReact} label="React" />
+            <TechnologyItem icon={SiVuejs} label="Vue.js" />
             {/* Design Tools */}
-            <TechnologyItem icon={FaFigma} label="Figma" />
-            <TechnologyItem icon={FaAdobe} label="Adobe Suite" />
+            <TechnologyItem icon={SiFigma} label="Figma" />
+            <TechnologyItem icon={SiAdobe} label="Adobe Suite" />
             {/* Website Platforms */}
-            <TechnologyItem icon={FaWordpress} label="WordPress" />
-            <TechnologyItem icon={FaShopify} label="Shopify" />
-            <TechnologyItem icon={FaSquarespace} label="Squarespace" />
+            <TechnologyItem icon={SiWordpress} label="WordPress" />
+            <TechnologyItem icon={SiShopify} label="Shopify" />
+            <TechnologyItem icon={SiSquarespace} label="Squarespace" />
             {/* Cloud Services and Analytics */}
-            <TechnologyItem icon={FaAws} label="AWS" />
-            <TechnologyItem icon={FaFirebase} label="Firebase" />
-            <TechnologyItem icon={FaSearch} label="SEO" />
+            <TechnologyItem icon={SiAws} label="AWS" />
+            <TechnologyItem icon={SiFirebase} label="Firebase" />
+            <TechnologyItem icon={SiSearch} label="SEO" />
           </ul>
         </section>
 
