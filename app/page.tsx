@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client';
 
 import {
@@ -9,20 +8,19 @@ import {
 import Link from 'next/link';
 import { FaEnvelope, FaPhone, FaWrench, FaCheckCircle } from 'react-icons/fa';
 import { 
-  SiAdobe, 
-  SiAws, 
-  SiCss3Alt, 
-  SiFigma, 
-  SiFirebase, 
-  SiHtml5, 
-  SiJavascript, 
-  SiReact, 
-  SiSearch, 
-  SiShopify, 
-  SiSquarespace, 
-  SiVuejs, 
-  SiWordpress 
-} from 'react-icons/si';
+  FaHtml5, 
+  FaCss3Alt, 
+  FaJs, 
+  FaReact, 
+  FaVuejs, 
+  FaFigma, 
+  FaWordpress, 
+  FaShopify, 
+  FaSquarespace, 
+  FaAws, 
+  FaSearch 
+} from 'react-icons/fa'; // These are the correct icons
+import { SiAdobe, SiFirebase } from 'react-icons/si'; // Correct imports from Si (Simple Icons)
 import { IconType } from 'react-icons';
 
 // Define separate prop interfaces using discriminated unions
@@ -83,19 +81,19 @@ export default function Home() {
       <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6">
         {/* Header */}
         <header className="text-center space-y-2">
-          <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Artem Kravchenko</h1>
+          <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
           <p className="text-xl text-gray-300">
-            Web Developer and Designer
+            Веб-разработчик и дизайнер
           </p>
         </header>
 
         {/* Introduction */}
         <section className="text-center max-w-2xl">
           <h2 className="text-2xl font-semibold text-sky-300 mb-2">
-            Professional Web Development
+            Профессиональная веб-разработка
           </h2>
           <p className="text-sm leading-relaxed">
-            I, Artem Kravchenko, provide high-quality web development and design services. With years of experience, I guarantee fast and reliable solutions for your business. Contact me to ensure the effective operation of your online project!
+            Я, Артем Кравченко, предоставляю высококачественные услуги по веб-разработке и дизайну. С многолетним опытом я гарантирую быстрые и надежные решения для вашего бизнеса. Свяжитесь со мной, чтобы обеспечить эффективное функционирование вашего онлайн-проекта!
           </p>
         </section>
 
@@ -104,13 +102,13 @@ export default function Home() {
           <div className="bg-gray-800 p-4 rounded-md shadow-lg border-l-4 border-sky-300">
             <div className="flex items-center space-x-2">
               <FaWrench className="h-5 w-5 text-sky-300" />
-              <p className="text-lg font-bold">Development</p>
+              <p className="text-lg font-bold">Разработка</p>
             </div>
           </div>
           <div className="bg-gray-800 p-4 rounded-md shadow-lg border-l-4 border-sky-300">
             <div className="flex items-center space-x-2">
               <FaCheckCircle className="h-5 w-5 text-sky-300" />
-              <p className="text-lg font-bold">Design</p>
+              <p className="text-lg font-bold">Дизайн</p>
             </div>
           </div>
         </section>
@@ -118,43 +116,43 @@ export default function Home() {
         {/* Technologies */}
         <section className="text-center max-w-2xl">
           <h3 className="text-xl font-semibold text-sky-300 mb-3">
-            Technologies I Work With
+            Технологии, с которыми я работаю
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             {/* HTML/CSS/JS */}
-            <TechnologyItem icon={SiHtml5} label="HTML5" />
-            <TechnologyItem icon={SiCss3Alt} label="CSS3" />
-            <TechnologyItem icon={SiJavascript} label="JavaScript" />
+            <TechnologyItem icon={FaHtml5} label="HTML5" />
+            <TechnologyItem icon={FaCss3Alt} label="CSS3" />
+            <TechnologyItem icon={FaJs} label="JavaScript" />
             {/* Frameworks */}
-            <TechnologyItem icon={SiReact} label="React" />
-            <TechnologyItem icon={SiVuejs} label="Vue.js" />
+            <TechnologyItem icon={FaReact} label="React" />
+            <TechnologyItem icon={FaVuejs} label="Vue.js" />
             {/* Design Tools */}
-            <TechnologyItem icon={SiFigma} label="Figma" />
+            <TechnologyItem icon={FaFigma} label="Figma" />
             <TechnologyItem icon={SiAdobe} label="Adobe Suite" />
             {/* Website Platforms */}
-            <TechnologyItem icon={SiWordpress} label="WordPress" />
-            <TechnologyItem icon={SiShopify} label="Shopify" />
-            <TechnologyItem icon={SiSquarespace} label="Squarespace" />
+            <TechnologyItem icon={FaWordpress} label="WordPress" />
+            <TechnologyItem icon={FaShopify} label="Shopify" />
+            <TechnologyItem icon={FaSquarespace} label="Squarespace" />
             {/* Cloud Services and Analytics */}
-            <TechnologyItem icon={SiAws} label="AWS" />
+            <TechnologyItem icon={FaAws} label="AWS" />
             <TechnologyItem icon={SiFirebase} label="Firebase" />
-            <TechnologyItem icon={SiSearch} label="SEO" />
+            <TechnologyItem icon={FaSearch} label="SEO" />
           </ul>
         </section>
 
         {/* Advantages */}
         <section className="text-center max-w-2xl">
           <h3 className="text-xl font-semibold text-sky-300 mb-3">
-            Why Choose Me?
+            Почему выбирают меня?
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             {[
-              'Professional Approach',
-              'Fast Execution',
-              'Quality Materials',
-              'Affordable Prices',
-              'Work Warranty',
-              'Customized Solutions',
+              'Профессиональный подход',
+              'Быстрое выполнение',
+              'Качественные материалы',
+              'Доступные цены',
+              'Гарантия работы',
+              'Индивидуальные решения',
             ].map((point, index) => (
               <li key={index} className="flex items-start">
                 <FaCheckCircle className="mr-2 h-4 w-4 text-sky-300 flex-shrink-0 mt-1" />
@@ -172,39 +170,39 @@ export default function Home() {
               href="mailto:artem.v11@proton.me"
             >
               <FaEnvelope className="mr-2 h-5 w-5" />
-              Send Email
+              Отправить Email
             </Button>
             <Button
               asLink
               href="tel:+79281502762"
             >
               <FaPhone className="mr-2 h-5 w-5" />
-              Call Now
+              Позвонить сейчас
             </Button>
           </div>
         </section>
 
         {/* Contacts */}
         <section className="text-center max-w-2xl">
-          <h4 className="text-lg font-semibold text-sky-300 mb-2">Contact Information</h4>
+          <h4 className="text-lg font-semibold text-sky-300 mb-2">Контактная информация</h4>
           <p className="text-sm">
-            <strong>Address:</strong> [Your Address]
+            <strong>Адрес:</strong> [Ваш адрес]
           </p>
           <p className="text-sm">
             <strong>Email:</strong> <a href="mailto:artem.v11@proton.me" className="text-sky-300 underline">artem.v11@proton.me</a>
           </p>
           <p className="text-sm">
-            <strong>Phone:</strong> <a href="tel:+79281502762" className="text-sky-300 underline">+7 928 150-27-62</a>
+            <strong>Телефон:</strong> <a href="tel:+79281502762" className="text-sky-300 underline">+7 928 150-27-62</a>
           </p>
           <p className="text-sm">
-            <strong>Website:</strong> <a href="https://your-website.com" className="text-sky-300 underline" target="_blank" rel="noopener noreferrer">your-website.com</a>
+            <strong>Веб-сайт:</strong> <a href="https://your-website.com" className="text-sky-300 underline" target="_blank" rel="noopener noreferrer">your-website.com</a>
           </p>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="absolute bottom-2 text-center text-xs text-gray-400 w-full">
-        <p>© {new Date().getFullYear()} Artem Kravchenko. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Артем Кравченко. Все права защищены.</p>
       </footer>
     </div>
   );
