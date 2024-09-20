@@ -41,7 +41,7 @@ const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    'inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-sky-500 hover:bg-sky-600 text-white';
+    'inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-6 bg-sky-500 hover:bg-sky-600 text-white';
 
   if (asLink) {
     const { href, ...restProps } = props as ButtonAsLinkProps;
@@ -77,9 +77,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 animate-gradient">
       {/* Header */}
-      <header className="text-center py-8">
-        <h1 className="text-5xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
-        <p className="text-2xl text-gray-300">
+      <header className="text-center py-6">
+        <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
+        <p className="text-xl text-gray-300">
           Веб-разработчик и дизайнер
         </p>
       </header>
@@ -87,17 +87,17 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow px-4 sm:px-6 lg:px-8">
         {/* Introduction */}
-        <section className="text-center max-w-2xl mx-auto mb-8">
-          <h2 className="text-3xl font-semibold text-sky-300 mb-4">
+        <section className="text-center max-w-2xl mx-auto mb-6">
+          <h2 className="text-2xl font-semibold text-sky-300 mb-3">
             Профессиональная веб-разработка
           </h2>
-          <p className="text-lg leading-relaxed text-gray-200">
+          <p className="text-base leading-relaxed text-gray-200">
             Я, Артем Кравченко, предоставляю высококачественные услуги по веб-разработке и дизайну. С многолетним опытом я гарантирую быстрые и надежные решения для вашего бизнеса. Свяжитесь со мной, чтобы обеспечить эффективное функционирование вашего онлайн-проекта!
           </p>
         </section>
 
         {/* Main Services */}
-        <section className="flex justify-center space-x-8 mb-8">
+        <section className="flex justify-center space-x-6 mb-6">
           <div className="flex flex-col items-center space-y-2">
             <FaWrench className="h-6 w-6 text-sky-300" />
             <p className="text-lg font-bold text-white">Разработка</p>
@@ -109,11 +109,11 @@ export default function Home() {
         </section>
 
         {/* Technologies */}
-        <section className="text-center max-w-2xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-sky-300 mb-4">
+        <section className="text-center max-w-2xl mx-auto mb-6">
+          <h3 className="text-xl font-semibold text-sky-300 mb-3">
             Технологии, с которыми я работаю
           </h3>
-          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm justify-items-center">
             <TechnologyItem icon={FaHtml5} label="HTML5" />
             <TechnologyItem icon={FaCss3Alt} label="CSS3" />
             <TechnologyItem icon={FaJs} label="JavaScript" />
@@ -133,11 +133,11 @@ export default function Home() {
         </section>
 
         {/* Advantages */}
-        <section className="text-center max-w-2xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-sky-300 mb-4">
+        <section className="text-center max-w-2xl mx-auto mb-6">
+          <h3 className="text-xl font-semibold text-sky-300 mb-3">
             Почему выбирают меня?
           </h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm justify-items-center">
             {[
               'Профессиональный подход',
               'Быстрое выполнение',
@@ -155,7 +155,7 @@ export default function Home() {
         </section>
 
         {/* Call to Action */}
-        <section className="flex justify-center space-x-4 mb-8">
+        <section className="flex justify-center space-x-4 mb-6">
           <Button
             asLink
             href="mailto:artem.v11@proton.me"
@@ -173,11 +173,8 @@ export default function Home() {
         </section>
 
         {/* Contacts */}
-        <section className="text-center max-w-2xl mx-auto mb-8">
+        <section className="text-center max-w-2xl mx-auto mb-6">
           <h4 className="text-lg font-semibold text-sky-300 mb-2">Контактная информация</h4>
-          <p className="text-sm text-gray-200">
-            <strong>Адрес:</strong> [Ваш адрес]
-          </p>
           <p className="text-sm text-gray-200">
             <strong>Email:</strong> <a href="mailto:artem.v11@proton.me" className="text-sky-300 underline">artem.v11@proton.me</a>
           </p>
@@ -194,4 +191,3 @@ export default function Home() {
     </div>
   );
 }
-
