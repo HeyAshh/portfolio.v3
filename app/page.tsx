@@ -19,8 +19,8 @@ import {
   FaSquarespace, 
   FaAws, 
   FaSearch 
-} from 'react-icons/fa'; // These are the correct icons
-import { SiAdobe, SiFirebase } from 'react-icons/si'; // Correct imports from Si (Simple Icons)
+} from 'react-icons/fa';
+import { SiAdobe, SiFirebase } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 // Define separate prop interfaces using discriminated unions
@@ -78,7 +78,25 @@ const TechnologyItem: FC<{ icon: IconType; label: string }> = ({ icon: Icon, lab
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gray-900 text-gray-100 flex flex-col justify-center items-center p-4">
-      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6">
+      <style jsx>{`
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .animated-bg {
+          background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #2563eb, #1d4ed8);
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+        }
+      `}</style>
+      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6 animated-bg p-6 rounded-lg">
         {/* Header */}
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
@@ -193,9 +211,6 @@ export default function Home() {
           </p>
           <p className="text-sm">
             <strong>Телефон:</strong> <a href="tel:+79281502762" className="text-sky-300 underline">+7 928 150-27-62</a>
-          </p>
-          <p className="text-sm">
-            <strong>Веб-сайт:</strong> <a href="https://your-website.com" className="text-sky-300 underline" target="_blank" rel="noopener noreferrer">your-website.com</a>
           </p>
         </section>
       </main>
