@@ -79,24 +79,18 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-gray-900 text-gray-100 flex flex-col justify-center items-center p-4">
       <style jsx>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
+        @keyframes backgroundAnimation {
+          0% { background-color: #1d4ed8; }
+          25% { background-color: #2563eb; }
+          50% { background-color: #3b82f6; }
+          75% { background-color: #1e3a8a; }
+          100% { background-color: #1d4ed8; }
         }
-        .animated-bg {
-          background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #2563eb, #1d4ed8);
-          background-size: 400% 400%;
-          animation: gradient 15s ease infinite;
+        .background-animate {
+          animation: backgroundAnimation 10s linear infinite;
         }
       `}</style>
-      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6 animated-bg p-6 rounded-lg">
+      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center space-y-6 background-animate p-6 rounded-lg">
         {/* Header */}
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
