@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom gradient animation if desired */
+/* Custom gradient animation */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -11,6 +11,7 @@
 }
 
 .animate-gradient {
+  background: linear-gradient(-45deg, #1f2937, #111827, #1f2937, #111827);
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
 }
