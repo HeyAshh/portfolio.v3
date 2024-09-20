@@ -67,9 +67,9 @@ const Button: FC<ButtonProps> = ({
 };
 
 const TechnologyItem: FC<{ icon: IconType; label: string }> = ({ icon: Icon, label }) => (
-  <li className="flex items-center">
+  <li className="flex items-center justify-center">
     <Icon className="mr-2 h-4 w-4 text-sky-300" />
-    <span>{label}</span>
+    <span className="text-center">{label}</span>
   </li>
 );
 
@@ -113,7 +113,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold text-sky-300 mb-4">
             Технологии, с которыми я работаю
           </h3>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm justify-items-center">
             <TechnologyItem icon={FaHtml5} label="HTML5" />
             <TechnologyItem icon={FaCss3Alt} label="CSS3" />
             <TechnologyItem icon={FaJs} label="JavaScript" />
@@ -135,7 +135,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold text-sky-300 mb-4">
             Почему выбирают меня?
           </h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm justify-items-center">
             {[
               'Профессиональный подход',
               'Быстрое выполнение',
@@ -144,9 +144,9 @@ export default function Home() {
               'Гарантия работы',
               'Индивидуальные решения',
             ].map((point, index) => (
-              <li key={index} className="flex items-start">
+              <li key={index} className="flex items-center justify-center">
                 <FaCheckCircle className="mr-2 h-4 w-4 text-sky-300 flex-shrink-0 mt-1" />
-                <span className="text-white">{point}</span>
+                <span className="text-center text-white">{point}</span>
               </li>
             ))}
           </ul>
