@@ -20,7 +20,7 @@ import {
   FaAws, 
   FaSearch 
 } from 'react-icons/fa';
-import { SiAdobe, SiFirebase } from 'react-icons/si';
+import { SiAdobe, SiFirebase, SiCanva, SiWebflow } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 interface ButtonAsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -67,15 +67,15 @@ const Button: FC<ButtonProps> = ({
 };
 
 const TechnologyItem: FC<{ icon: IconType; label: string }> = ({ icon: Icon, label }) => (
-  <li className="flex items-center justify-center">
-    <Icon className="mr-2 h-4 w-4 text-sky-300" />
-    <span className="text-center">{label}</span>
+  <li className="flex flex-col items-center justify-center">
+    <Icon className="h-8 w-8 text-sky-300 mb-2" />
+    <span className="text-center text-white">{label}</span>
   </li>
 );
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 animate-gradient">
       {/* Header */}
       <header className="text-center py-8">
         <h1 className="text-5xl font-bold tracking-tighter text-sky-400">Артем Кравченко</h1>
@@ -98,12 +98,12 @@ export default function Home() {
 
         {/* Main Services */}
         <section className="flex justify-center space-x-8 mb-8">
-          <div className="flex items-center space-x-2">
-            <FaWrench className="h-5 w-5 text-sky-300" />
+          <div className="flex flex-col items-center space-y-2">
+            <FaWrench className="h-6 w-6 text-sky-300" />
             <p className="text-lg font-bold text-white">Разработка</p>
           </div>
-          <div className="flex items-center space-x-2">
-            <FaCheckCircle className="h-5 w-5 text-sky-300" />
+          <div className="flex flex-col items-center space-y-2">
+            <FaCheckCircle className="h-6 w-6 text-sky-300" />
             <p className="text-lg font-bold text-white">Дизайн</p>
           </div>
         </section>
@@ -113,7 +113,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold text-sky-300 mb-4">
             Технологии, с которыми я работаю
           </h3>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm justify-items-center">
+          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
             <TechnologyItem icon={FaHtml5} label="HTML5" />
             <TechnologyItem icon={FaCss3Alt} label="CSS3" />
             <TechnologyItem icon={FaJs} label="JavaScript" />
@@ -127,6 +127,8 @@ export default function Home() {
             <TechnologyItem icon={FaAws} label="AWS" />
             <TechnologyItem icon={SiFirebase} label="Firebase" />
             <TechnologyItem icon={FaSearch} label="SEO" />
+            <TechnologyItem icon={SiCanva} label="Canva" />
+            <TechnologyItem icon={SiWebflow} label="Webflow" />
           </ul>
         </section>
 
@@ -135,7 +137,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold text-sky-300 mb-4">
             Почему выбирают меня?
           </h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm justify-items-center">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
             {[
               'Профессиональный подход',
               'Быстрое выполнение',
@@ -144,8 +146,8 @@ export default function Home() {
               'Гарантия работы',
               'Индивидуальные решения',
             ].map((point, index) => (
-              <li key={index} className="flex items-center justify-center">
-                <FaCheckCircle className="mr-2 h-4 w-4 text-sky-300 flex-shrink-0 mt-1" />
+              <li key={index} className="flex flex-col items-center">
+                <FaCheckCircle className="h-6 w-6 text-sky-300 mb-2" />
                 <span className="text-center text-white">{point}</span>
               </li>
             ))}
@@ -192,3 +194,4 @@ export default function Home() {
     </div>
   );
 }
+
